@@ -5,7 +5,7 @@ class AlphabetsController < ApplicationController
   def index
     @alphabets = Alphabet.all
 
-    render json: @alphabets, include: :values
+    render json: @alphabets
   end
 
   # , :except => [:created_at, :updated_at]
