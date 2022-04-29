@@ -8,6 +8,8 @@ class AlphabetsController < ApplicationController
     render json: @alphabets, include: :values
   end
 
+  # , :except => [:created_at, :updated_at]
+
   # GET /alphabets/1
   def show
     render json: @alphabet

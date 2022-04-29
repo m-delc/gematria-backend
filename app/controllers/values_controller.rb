@@ -5,7 +5,7 @@ class ValuesController < ApplicationController
   def index
     @values = Value.all
 
-    render json: @values
+    render json: @values, :except => [:created_at, :updated_at]
   end
 
   # GET /values/1
